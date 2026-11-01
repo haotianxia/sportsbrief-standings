@@ -1,0 +1,12 @@
+_ > nanoagent.plugin.v0001.ProductConfig:
+tagline: "The standings of a league season on any day, every rank and games-behind figure checked against the results"
+summary: "Name a season of the Gulf Coast Basketball League and a date. The agent reads every team's tally of wins, losses and points through that day, works out each team's winning percentage, games behind and point differential, breaks ties by differential and then by name, and submits the full table. The check pins the whole season's results and rebuilds the table from them: 10 constraints, each shown with what was expected and found, and a partial score for a table that is nearly right."
+highlights:
+  - "Two bundled seasons of a fictional eight-team league, built so that teams tie on record, and sometimes on differential too"
+  - "Exact rules: percentages to 3 decimals half away from zero, order by exact share of games won, games behind in halves that can go negative"
+  - "A date before the first game gives a table of 0-0 records, ranked by name"
+  - "Every verdict lists its 10 checks, the expected table, and how many rows were exactly right"
+steps:
+  - "Ask for a season (gcbl-2025 or gcbl-2026) and the last day to count"
+  - "The agent tallies the records in one call, ranks the teams and submits the table"
+  - "Read the table with its verdict, and ask to list the games behind it"

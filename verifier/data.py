@@ -1,0 +1,87 @@
+"""The bundled seasons of the Gulf Coast Basketball League, an invented eight-team league: every team,
+date and score is made up. Games are in date order. The 2026 season is built so that standings on the
+way hold ties on record broken by point differential and, on 2026-10-26 and 2026-10-29, ties on
+both record and differential broken by name."""
+
+HER, HAWK, OTT, LYNX, CRANE, BIS, WOLF, FOX = (
+    "Bayou Herons",
+    "Canyon Hawks",
+    "Delta Otters",
+    "Harbor Lynx",
+    "Lakeside Cranes",
+    "Prairie Bison",
+    "Ridge Wolves",
+    "Summit Foxes",
+)
+
+
+def game(number, date, home, home_score, away_score, away):
+    return {"id": f"g{number:02d}", "date": date, "home": home, "away": away, "home_score": home_score, "away_score": away_score}
+
+
+SEASONS = {
+    "gcbl-2025": [
+        game(1, "2025-10-21", LYNX, 98, 92, FOX),
+        game(2, "2025-10-21", HER, 101, 104, OTT),
+        game(3, "2025-10-21", BIS, 90, 87, WOLF),
+        game(4, "2025-10-21", CRANE, 95, 99, HAWK),
+        game(5, "2025-10-23", FOX, 108, 100, HER),
+        game(6, "2025-10-23", OTT, 97, 93, BIS),
+        game(7, "2025-10-23", WOLF, 88, 94, LYNX),
+        game(8, "2025-10-23", HAWK, 102, 96, CRANE),
+        game(9, "2025-10-25", LYNX, 91, 89, OTT),
+        game(10, "2025-10-25", HER, 99, 95, CRANE),
+        game(11, "2025-10-25", BIS, 85, 93, HAWK),
+        game(12, "2025-10-25", FOX, 100, 90, WOLF),
+        game(13, "2025-10-28", OTT, 106, 103, FOX),
+        game(14, "2025-10-28", CRANE, 92, 88, BIS),
+        game(15, "2025-10-28", HAWK, 97, 101, LYNX),
+        game(16, "2025-10-28", WOLF, 90, 96, HER),
+        game(17, "2025-10-30", LYNX, 104, 99, HER),
+        game(18, "2025-10-30", FOX, 93, 90, HAWK),
+        game(19, "2025-10-30", BIS, 100, 94, OTT),
+        game(20, "2025-10-30", WOLF, 89, 95, CRANE),
+        game(21, "2025-11-01", HAWK, 99, 96, OTT),
+        game(22, "2025-11-01", HER, 103, 98, BIS),
+        game(23, "2025-11-01", CRANE, 90, 94, FOX),
+        game(24, "2025-11-01", LYNX, 100, 86, WOLF),
+    ],
+    "gcbl-2026": [
+        game(1, "2026-10-20", LYNX, 104, 97, HER),
+        game(2, "2026-10-20", FOX, 88, 80, BIS),
+        game(3, "2026-10-20", HAWK, 95, 101, OTT),
+        game(4, "2026-10-20", WOLF, 90, 93, CRANE),
+        game(5, "2026-10-22", HER, 99, 92, FOX),
+        game(6, "2026-10-22", BIS, 85, 91, LYNX),
+        game(7, "2026-10-22", OTT, 102, 96, WOLF),
+        game(8, "2026-10-22", CRANE, 87, 89, HAWK),
+        game(9, "2026-10-24", LYNX, 110, 108, OTT),
+        game(10, "2026-10-24", FOX, 94, 90, CRANE),
+        game(11, "2026-10-24", BIS, 97, 95, HAWK),
+        game(12, "2026-10-24", HER, 100, 89, WOLF),
+        game(13, "2026-10-26", CRANE, 96, 90, BIS),
+        game(14, "2026-10-26", HAWK, 94, 85, WOLF),
+        game(15, "2026-10-26", LYNX, 101, 99, FOX),
+        game(16, "2026-10-26", OTT, 105, 100, HER),
+        game(17, "2026-10-29", WOLF, 97, 94, LYNX),
+        game(18, "2026-10-29", BIS, 103, 99, OTT),
+        game(19, "2026-10-29", HER, 91, 86, CRANE),
+        game(20, "2026-10-29", FOX, 90, 84, HAWK),
+        game(21, "2026-11-01", LYNX, 99, 92, HAWK),
+        game(22, "2026-11-01", HER, 108, 104, BIS),
+        game(23, "2026-11-01", OTT, 96, 93, FOX),
+        game(24, "2026-11-01", CRANE, 101, 95, WOLF),
+        game(25, "2026-11-03", FOX, 87, 83, WOLF),
+        game(26, "2026-11-03", HAWK, 92, 89, HER),
+        game(27, "2026-11-03", OTT, 100, 94, CRANE),
+        game(28, "2026-11-03", BIS, 98, 96, LYNX),
+        game(29, "2026-11-05", LYNX, 103, 97, CRANE),
+        game(30, "2026-11-05", HER, 95, 90, OTT),
+        game(31, "2026-11-05", FOX, 91, 88, BIS),
+        game(32, "2026-11-05", WOLF, 99, 96, HAWK),
+        game(33, "2026-11-07", HER, 102, 98, LYNX),
+        game(34, "2026-11-07", OTT, 94, 90, BIS),
+        game(35, "2026-11-07", CRANE, 89, 85, FOX),
+        game(36, "2026-11-07", HAWK, 97, 93, WOLF),
+    ],
+}
